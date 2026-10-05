@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ControlDoc | Sitio en mantenimiento</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.ico">
+
+  <style>
+    html {
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(29, 2, 85) 38%, rgb(55, 2, 146) 100%);
+      color: #fff;
+      padding: 2rem;
+      position: relative;
+    }
+
+
+    .bg-image {
+      position: relative;
+    }
+    .bg-image:before {
+      content: "";
+      position: fixed;
+      top: -5%;
+      left: -5%;
+      width: 110%;
+      height: 110%;
+      background-image: url(assets/bg.png);
+      animation: bgMove 20s ease-in-out infinite alternate;
+      background-attachment: scroll;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: -1;
+      pointer-events: none;
+      will-change: transform;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+
+    .error-card {
+      position: relative;
+      max-width: 650px;
+      width: 100%;
+      text-align: center;
+      padding: 2rem 4rem 5rem 2rem;
+      border-radius: 24px;
+      background: rgba(15, 23, 42, .65);
+      backdrop-filter: blur(2px);
+      border: 1px solid rgba(255,255,255,.08);
+      box-shadow: 0 0 7px #8e59ff;
+      z-index: 2;
+    }
+
+    .logo {
+      margin-bottom: 1.5rem;
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .logo img {
+      width: 100%;
+      max-width: 200px;
+    }
+
+    .error-img {
+      width: 100%;
+      max-width: 180px;
+      position: absolute;
+      right: -80px;
+      bottom: -100px;
+      margin: 0 auto;
+    }
+
+    .gradient-text {
+      font-size: 1.8rem;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 1rem;
+      color: #ffffff;
+    }
+
+    h1 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    p {
+      color: #ffffff;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    a {
+      color: #17e0bc;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body class="bg-image">
+  <div class="error-card">
+    <div class="logo">
+      <img src="assets/logo_white.png" alt="Logo Controldoc">
+    </div>
+    <h1 class="gradient-text">
+      Sitio en mantenimiento
+    </h1>
+    <p>
+      <strong>
+        Estamos trabajando para restablecer el servicio lo antes posible.
+      </strong>
+      <br/>
+      Volveremos Pronto. Gracias por tu paciencia.
+    </p>
+    <img src="assets/user_alert.png" alt="" class="error-img">
+  </div>
+</body>
+</html>
